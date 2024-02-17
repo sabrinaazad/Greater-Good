@@ -1,0 +1,109 @@
+.section--insurance-slider {
+    padding-left: 0;
+    padding-right: 0;
+    @include tablet {
+        padding: 0;
+    }
+    .two-col {
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+        @include tablet {
+            flex-direction: row;
+            align-items: center;
+        }
+        .col {
+            @include tablet {
+                flex-basis: 50%;
+                width: 50%;
+            }
+            &:first-child {
+                padding-right: 1rem;
+                position: relative;
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    border-top-right-radius: 50%;
+                    border-bottom-right-radius: 50%;
+                    background-color: $dahlia;
+                    position: absolute;
+                    z-index: 1;
+                    @include tablet {
+                        //top: 10%;
+                    }
+                }
+                @include desktop {
+                    padding: 2rem;
+                }
+                .slick-vertical {
+                    max-width: 20rem;
+                    margin-left: 0.5rem;
+                    z-index: 2;
+                    padding: 4rem 0;
+                    @include regulardesktop {
+                        padding: 0;
+                        margin: auto;
+                    }
+                }
+                .slick-vertical .slick-slide, .slick-vertical .slick-track  {
+                    display: block;
+                    img {
+                        width: auto;
+                        padding: 1rem;
+                    }
+                    
+                }
+                .slick-vertical .slick-dots {
+                    transform: rotate(90deg);
+                    left: -130%;
+                    width: auto;
+                    top: 0;
+                    li {
+                        width: 15px;
+                        height: 5px;
+                        @include transitionAll;
+                        button {
+                            width: 15px;
+                            height: 5px;
+                            border-radius: 1rem;
+                            background-color: $coral;  
+                            @include transitionAll;
+                            &:before {
+                                color: $transparent;
+                                  
+                            }
+                        }
+                        &.slick-active {
+                            width: 75px;
+                            height: 5px;
+                            button {
+                                background-color: $plum;
+                                width: 75px;
+                                height: 5px;
+                                border-radius: 1rem;
+                                left: -3rem;
+                                &:before {
+                                    color: $transparent; 
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &:nth-child(2) {
+                padding: 1rem;
+                text-align: center;
+                @include tablet {
+                    text-align: left;
+                    padding: 4rem 2rem;
+                }
+                .wrapper--btn {
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+}

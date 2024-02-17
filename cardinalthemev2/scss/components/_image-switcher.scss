@@ -1,0 +1,134 @@
+.section--image-switcher {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    @include tablet {
+        padding-bottom: 0;
+    }
+    .two-col {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        @include tablet {
+            flex-direction: row;
+            align-items: stretch;
+        }
+        .col {
+            width: 100%;
+            @include tablet {
+                flex-basis: 50%;
+                width: 50%;
+            }
+            &:first-child {
+                padding-top: 4rem;
+                padding-bottom: 6rem;
+                position: relative;
+                z-index: 2;
+                @include desktop {
+                    display: flex;
+                    justify-content: center;
+                }
+                &::after {
+                    content: "";
+                    width: 150%;
+                    height: 100%;
+                    background-color: $mint;
+                    top: 0;
+                    left: -50%;
+                    position: absolute;
+                    border-bottom-left-radius: 12rem;
+                    border-bottom-right-radius: 12rem;
+                    z-index: -1;
+                    @include desktop {
+                        border-top-right-radius: 10rem;
+                        border-bottom-right-radius: 10rem;
+                        border-bottom-left-radius: 0;
+                        border-top-left-radius: 0;
+                    }
+                    @include largedesktop {
+                        border-top-right-radius: 16rem;
+                        border-bottom-right-radius: 16rem;
+                    }
+                }
+                @keyframes fadeEffect {
+                    from {opacity: 0;}
+                    to {opacity: 1;}
+                }
+                .wrapper--image {
+                    width: auto;
+                    img {
+                        display: block;
+                        margin: auto;
+                    }
+                }
+                .tab {
+                    margin-left: 2rem;
+                    padding: 0.5rem 0;
+                    @include regulardesktop {
+                        margin-left: 0;
+                    }
+                    .tablink {
+                        background: $transparent;
+                        border: 0;
+                        color: $plum;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        text-align: left;
+                        padding: 0.5rem;
+                        .arrow-active {
+                            display: none;
+                            margin-right: 1rem;
+                        }
+                        .arrow-inactive {
+                            display: flex;
+                            margin-right: 1rem;
+                        }
+                        &.active {
+                            color: $coral;
+                            background: $white;
+                            border-radius: 1rem;
+                            .arrow-active {
+                                display: flex;
+                            }
+                            .arrow-inactive {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                .tabcontent {
+                    display: none;
+                    border-top: none;
+                    padding: 1em;
+                    animation: fadeEffect 1s;
+                    @include tablet {
+                        .wrapper--image {
+                            max-width: 10rem;
+                        }
+                    }
+                }
+            }
+            &:nth-child(2) {
+                padding: 4rem 1rem 0;
+                text-align: center;
+                @include tablet {
+                    text-align: left;
+                    padding: 1rem 2rem;
+                }
+                @include desktop {
+                    padding: 4rem 2rem;
+                }
+                .heading,
+                .subheading,
+                .blurb {
+                    color: $white;
+                }
+                .wrapper--btn {
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+}

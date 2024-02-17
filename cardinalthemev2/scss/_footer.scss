@@ -1,0 +1,79 @@
+/************************************************************************/
+/**************************** FOOTER STYLES *****************************/
+/************************************************************************/
+
+.footer {
+    background-color:$forest;
+    text-align: center;
+    .container--logo {
+        margin: 0 auto;
+        img {
+            width: 20rem;
+            @include tablet {
+                width: 30rem;
+            }
+        }
+    }
+    .container--nav {
+        margin-top: 4rem;
+        .nav {
+            padding-left: 0;
+            list-style-type: none;
+            text-align: center;
+            li {
+                padding: 1rem 0.25rem;
+                @include tablet {
+                    padding: 1rem;
+                }
+                a {
+                    color: $white;
+                    text-transform: uppercase;
+                    font-weight: 300;
+                    font-size: 20px;
+                }
+            }
+            @include tablet {
+                flex-basis: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+            }
+        }
+    }
+    .container--social {
+        margin: 2rem 0;
+        .icon {
+            margin: 0 0.15rem;
+            img {
+                width: 2rem;
+                height: 2rem;
+                @include transitionAll();
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    .container--contact {
+        .btn {
+            min-width: 15rem;
+        }
+    }
+    .container--hipaa {
+        margin-top: 3rem;
+        @include tablet {
+            margin-top: 0;
+        }
+        img {
+           width: 15rem; 
+        }
+    }
+    @include tablet {
+        .col:nth-child(3) {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+    }
+}

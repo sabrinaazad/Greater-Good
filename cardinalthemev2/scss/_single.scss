@@ -1,0 +1,121 @@
+.section--single--team-members {
+    
+    .wrapper--image {
+        max-width: 20rem;
+        border: 1rem solid $mint;
+        border-radius: 50%;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    .wrapper--content {
+        text-align: center;
+        .name {
+            font-size: 1.5rem;
+        }
+        .title {
+            text-transform: uppercase;
+            font-size: 1.25rem;
+        }
+        p {
+            line-height: 1.5;
+        }
+        .social {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .icon {
+                width: 35px;
+                height: 35px;
+                display: block;
+                margin: 2px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+        }
+    }
+    @include tablet {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        max-width: 1600px;
+        .wrapper--image {
+            flex-basis: 35%;
+        }
+        .wrapper--content {
+            flex-basis: 60%;
+            text-align: left;
+            .social {
+                justify-content: flex-start;
+            }
+        }
+    }
+    @include regulardesktop {
+        align-items: center;
+        .wrapper--image {
+            flex-basis: 40%;
+            max-width: 30rem;
+        }
+        .wrapper--content {
+            flex-basis: 55%;
+        }
+    }
+}
+
+.single-tribe_events {
+    #tribe-events-pg-template {
+        max-width: 100%;
+        padding: 0;
+        .tribe-events-schedule {
+            padding: 1rem;
+            display: none;
+        }
+        .tribe-events-flex-wrap {
+            padding: 2rem 1rem 0;
+            max-width: 1440px;
+            margin: auto;
+            @include desktop {
+                display: flex;
+                justify-content: space-between;
+                padding: 1rem;
+                .tribe-events-event-image {
+                    flex-basis: 40%;
+                }
+                .tribe-events-single-event-description {
+                    flex-basis: 58%;
+                }
+            }
+            .tribe-events-meta-group .tribe-events-single-section-title {
+                font-family: 'Comfortaa';
+                font-size: 1.5rem;
+            }
+        }
+        .tribe-events.tribe-common {
+            display: none;
+        }
+        @include tablet {
+            
+            .tribe-events-event-meta.primary, 
+            .tribe-events-event-meta.secondary {
+                width: 100%;
+                display: flex;
+                .tribe-events-meta-group {
+                    width: 25%;
+                    flex-basis: 25%;
+                    h2 {
+                        font-family: 'Comfortaa';
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.section--events-calendar {
+    .wrapper--header {
+        padding: 0 1rem;
+        max-width: 50rem;
+        margin: auto;
+        text-align: center;
+        .heading,
+        .subheading,
+        .blurb {
+            color: $plum;
+        }
+    }
+    .tribe-common--breakpoint-medium.tribe-events .tribe-events-calendar-month__header-column-title-desktop {
+        font-size: 1.25rem;
+        color: $forest;
+    }
+    .tribe-common--breakpoint-medium.tribe-events .tribe-events-calendar-month__day-cell--desktop {
+        background-color: $white;
+    }
+    .tribe-events .tribe-events-calendar-month__day-date-daynum, .tribe-events .tribe-events-calendar-month__day-date-link {
+        color: $forest;
+    }
+    .tribe-events-c-subscribe-dropdown__container, .tribe-events-header__events-bar, .tribe-events-calendar-month__calendar-event-datetime {
+        display: none!important;
+    }
+}

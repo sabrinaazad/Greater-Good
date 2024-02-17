@@ -1,0 +1,120 @@
+.section--photos-text-and-button {
+    .wrapper--header {
+        max-width: 50rem;
+        margin: auto;
+        text-align: center;
+        .heading,
+        .subheading,
+        .blurb {
+            color: $plum;
+        }
+    }
+    .panel__features {
+        max-width: 90rem;
+        margin: auto;
+        .features {
+           
+            @include desktop {
+                display: flex;
+                margin-bottom: 7rem;
+            }
+            .slide {
+                flex-basis: 25%;
+                flex-grow: 1;
+                @include desktop {
+                    &:first-child {
+                        .feature {
+                            border-top-left-radius: 1.5rem;
+                            border-bottom-left-radius: 1.5rem;
+                        }
+                    }
+                    &:last-child {
+                        .feature {
+                            border-top-right-radius: 1.5rem;
+                            border-bottom-right-radius: 1.5rem;
+                        }
+                    }
+                }
+            }
+            .feature {
+                margin-top: 10rem;
+                text-align: center;
+                padding: 1rem 2rem;
+                position: relative;
+                @include borderRadius();
+                @include desktop {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    margin-top: 7rem;
+                    border-radius: 0;
+                }
+                @include largedesktop { 
+                    margin-top: 9rem;
+                }
+                .wrapper--image {
+                    position: relative;
+                    width: 15rem;
+                    top: -9rem;
+                    height: 7rem;
+                    @include desktop {
+                        width: 7rem;
+                        top: -5rem;
+                        height: 1rem;
+                    }
+                    @include regulardesktop {
+                        width: 9rem;
+                        top: -6rem;
+                    }
+                    @include largedesktop { 
+                        width: 13rem;
+                        height: 3rem;
+                        top: -8rem;
+                    }
+                    @include xldesktop { 
+                        width: 15rem;
+                        height: 7rem;
+                    }
+                    img {
+                        border-radius: 50%;
+                        margin: auto;
+                    }
+                }
+                .title, 
+                .text {
+                    color: $white;
+                    margin: 0.25rem 0;
+                    @include desktop {
+                        text-align: left;
+                    }
+                }
+                .wrapper--btn {
+                    @include desktop {
+                        text-align: left;
+                    }
+                    .btn {
+                        width: 90%;
+                        @include desktop {
+                            width: initial;
+                        }
+                    }
+                }
+            }
+        }
+        .slick-slider {
+            .slick-dots  {
+                li {
+                    button:before {
+                        color: $dahlia;
+                    }
+                    &.slick-active {
+                        button:before {
+                            color: $plum;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

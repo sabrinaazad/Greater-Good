@@ -1,0 +1,61 @@
+/*
+Theme Name: Cardinal Theme
+Text Domain: https://www.{sitename}.com
+Author: Sabrina Matthews at Cardinal Digital Marketing
+Author URI: https://www.cardinaldigitalmarketing.com
+Version: 1.0.0
+*/
+//---------------------SASS SECTION------------------------//
+
+@import '_variables';
+@import '_mixins';
+@import '_media-queries';
+@import '_fonts';
+@import '_global';
+@import '_nav';
+@import '_footer';
+@import '_blog';
+@import '_single';
+@import '_archive';
+@import 'components/_blog-carousel';
+
+@import 'components/_checklist';
+@import 'components/_contact-form';
+@import 'components/_cta-v1';
+@import 'components/_cta-v2';
+
+@import 'components/_events-calendar';
+
+@import 'components/_faq';
+
+@import 'components/_image-gallery';
+@import 'components/_image-switcher';
+@import 'components/_insurance-slider';
+
+@import 'components/_location-finder';
+@import 'components/_location-info';
+@import 'components/_logo-slider';
+
+@import 'components/_patients-hero';
+@import 'components/_photos-text-and-button';
+@import 'components/_process';
+
+@import 'components/_oval-link-boxes';
+
+@import 'components/_search-hero';
+@import 'components/_secondary-hero';
+@import 'components/_service-or-resource-grid';
+@import 'components/_side-by-side-image-and-text';
+@import 'components/_side-by-side-image-text-and-stats';
+@import 'components/_standard-hero';
+@import 'components/_statistics';
+
+@import 'components/_tab-content-switcher-v1';
+@import 'components/_tab-content-switcher-v2';
+@import 'components/_team-members-v2';
+@import 'components/_testimonials-v1';
+@import 'components/_testimonials-v2';
+
+@import 'components/_upcoming-events';
+@import 'components/_value-icon-list';
+@import 'components/_video-carousel';

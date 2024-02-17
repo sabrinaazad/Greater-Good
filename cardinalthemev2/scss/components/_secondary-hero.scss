@@ -1,0 +1,18 @@
+.section--secondary-hero {
+    text-align: center;
+    background-position: left;
+    @include tablet {
+        background-position: center;
+        padding: 6rem 2rem;
+    }
+    .heading {
+        font-size: 2.5rem;
+        color: $white;
+    }
+    .blurb {
+        max-width: 45rem;
+        margin: auto;
+        color: $white;
+        line-height: 1.5;
+    }
+}

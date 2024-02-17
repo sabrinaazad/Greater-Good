@@ -1,0 +1,301 @@
+.section--process {
+    .wrapper--header {
+        max-width: 50rem;
+        margin: auto;
+        text-align: center;
+        .heading,
+        .subheading,
+        .blurb {
+            color: $forest;
+        }
+        .heading {
+            position: relative;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            &::after {
+                content: " ";
+                position: absolute;
+                bottom: 0;
+                width: 50%;
+                background-color:  $coral;
+                height: 0.25rem;
+                left: 25%;
+            }
+        }
+    }
+    .panel__features {
+        max-width: 90rem;
+        margin: auto;
+        .features {
+           
+            @include desktop {
+                display: flex;
+                //margin-bottom: 7rem;
+                margin-top: 7rem;
+            }
+            @include regulardesktop {
+                margin-top: 10rem;
+            }
+            @include largedesktop {
+                margin-top: 14rem;
+            }
+            .slide {
+                flex-basis: 25%;
+                flex-grow: 1;
+                &:last-child {
+                    .feature {
+                        &::before, &::after {
+                            content: none;
+                        }
+                    }
+                }
+                @include desktop {
+                    &:first-child {
+                        .feature {
+                            border-top-left-radius: 1.5rem;
+                            border-bottom-left-radius: 1.5rem;
+                        }
+                    }
+                    &:last-child {
+                        .feature {
+                            border-top-right-radius: 1.5rem;
+                            border-bottom-right-radius: 1.5rem;
+                        }
+                    }
+                }
+            }
+            .feature {
+                margin-top: 10rem;
+                text-align: center;
+                padding: 1rem 2rem;
+                position: relative;
+                @include borderRadius();
+                @include desktop {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    margin-top: 0;
+                    border-radius: 0;
+                }
+                .wrapper--image {
+                    position: relative;
+                    width: 15rem;
+                    top: -9rem;
+                    height: 7rem;
+                    z-index: 2;
+                    @include desktop {
+                        width: 10rem;
+                        top: -6rem;
+                        height: 5rem;
+                    }
+                    @include regulardesktop {
+                        width: 14rem;
+                        top: -9rem;
+                    }
+                    @include largedesktop { 
+                        width: 18rem;
+                        top: -13rem;
+                    }
+                    // @include xldesktop { 
+                    //     width: 15rem;
+                    //     height: 7rem;
+                    // }
+                    img {
+                        border-radius: 50%;
+                        margin: auto;
+                    }
+                }
+                .title, 
+                .text {
+                    color: $white;
+                    margin: 1rem 0;
+                    @include desktop {
+                        text-align: left;
+                    }
+                }
+                .wrapper--btn {
+                    @include desktop {
+                        text-align: left;
+                    }
+                    .btn {
+                        width: 90%;
+                        @include desktop {
+                            width: initial;
+                        }
+                    }
+                }
+                @include desktop {
+                   
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        right: -1.25rem;
+                        background-image: url('/wp-content/themes/cardinalthemev2/assets/arrow-left.png');
+                        @include backgroundProperties();
+                        background-size: contain;
+                        width: 2.5rem;
+                        height: 2rem;
+                        top: -1.5rem;
+                        z-index: 2;
+                    }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        background-color: $white;
+                        left: 50%;
+                        top: -2rem;
+                        width: 100%;
+                        height: 3rem;
+                        z-index: 1;
+                        
+                    }
+                }
+                @include regulardesktop {
+                    &::after {
+                        width: 2.75rem;
+                        height: 2rem;
+                        top: -1.5rem;
+                    }
+                }
+            }
+        }
+        .slick-slider {
+            .slick-dots  {
+                li {
+                    button:before {
+                        color: $dahlia;
+                    }
+                    &.slick-active {
+                        button:before {
+                            color: $plum;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // .panel__features {
+    //     max-width: 70rem;
+    //     margin: auto;
+    //     margin-top: 14rem;
+    //     @include borderRadius();
+    //     .features {
+    //         @include desktop {
+    //             display: flex;
+    //         }
+    //         .slide {
+    //             flex-basis: 25%;
+    //             flex-grow: 1;
+    //             &:last-child {
+    //                 .feature {
+    //                     &::before, &::after {
+    //                         content: none;
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //         .feature {
+    //             text-align: center;
+    //             padding: 10rem 1rem 2rem;
+    //             position: relative;
+    //             @include desktop {
+    //                 height: 100%;
+    //                 display: flex;
+    //                 flex-direction: column;
+    //                 justify-content: space-between;
+    //             }
+    //             @include largedesktop { 
+    //                 padding-top: 12rem;
+    //                 padding-left: 4rem;
+    //                 padding-right: 4rem;
+    //             }
+    //             .wrapper--image {
+    //                 position: absolute;
+    //                 max-width: 20rem;
+    //                 top: -55%;
+    //                 width: 90%;
+    //                 left: calc(50% - 10rem);
+    //                 @include desktop {
+    //                     top: -20%;
+    //                     width: 14rem;
+    //                     left: calc(50% - 7rem);
+    //                 }
+    //                 @include regulardesktop {
+    //                     top: -30%;
+    //                     width: 16rem;
+    //                     left: calc(50% - 8rem);
+    //                 }
+    //                 img {
+    //                     border-radius: 50%;
+    //                     margin: auto;
+    //                 }
+    //             }
+    //             .title, 
+    //             .text {
+    //                 color: $white;
+    //                 margin: 0.25rem 0;
+    //                 @include desktop {
+    //                     text-align: left;
+    //                 }
+    //             }
+    //             .wrapper--btn {
+    //                 @include desktop {
+    //                     text-align: left;
+    //                 }
+    //                 .btn {
+    //                     width: 90%;
+    //                     @include desktop {
+    //                         width: initial;
+    //                     }
+    //                 }
+    //             }
+    //             @include desktop {
+                   
+    //                 &::after {
+    //                     content: "";
+    //                     position: absolute;
+    //                     right: -1.25rem;
+    //                     background-image: url('/wp-content/themes/cardinalthemev2/assets/arrow-left.png');
+    //                     @include backgroundProperties();
+    //                     background-size: contain;
+    //                     width: 2.5rem;
+    //                     height: 2rem;
+    //                     top: -1.5rem;
+    //                 }
+    //                 &::before {
+    //                     content: "";
+    //                     position: absolute;
+    //                     background-color: $white;
+    //                     left: 50%;
+    //                     top: -2rem;
+    //                     width: 100%;
+    //                     height: 3rem;
+                        
+    //                 }
+    //             }
+    //             @include regulardesktop {
+    //                 &::after {
+    //                     width: 2.75rem;
+    //                     height: 2rem;
+    //                     top: -1.5rem;
+    //                 }
+    //             }
+    //         }
+    //     }
+    //     .slick-slider {
+    //         .slick-dots  {
+    //             li {
+    //                 button:before {
+    //                     color: $dahlia;
+    //                 }
+    //                 &.slick-active {
+    //                     button:before {
+    //                         color: $plum;
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+}

@@ -1,0 +1,183 @@
+.section--checklist {
+    .wrapper--header {
+        padding: 0 1rem;
+        max-width: 50rem;
+        margin: auto;
+        text-align: center;
+        .heading,
+        .subheading,
+        .blurb {
+            color: $plum;
+        }
+    }
+    .wrapper--checklist {
+        margin: 2rem auto;
+        padding: 2rem 0;
+        @include borderRadius; 
+        background-color: $forest;
+        color: $white;
+        .wrapper--inner {
+            overflow: scroll;
+            position: relative;
+            @include desktop {
+                overflow: hidden;
+                max-width: 90%;
+                margin: auto;
+            }
+            &::before {
+                content: "";
+                background-color: $mint;
+                width: 90%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 5%;
+                border-radius: 1rem;
+                @include desktop {
+                    width: 33%;
+                    left: 33%;
+                }
+            }
+            .wrapper--scroll {
+                width: 200%;
+                @include desktop {
+                    width: auto;
+                }
+            }
+        }
+        .labels {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            font-family: 'Playfair Display';
+            font-size: 1.5rem;
+            text-align: center;
+            margin: auto;
+            position: relative;
+            @include tablet {
+                font-size: 1.25rem;
+            }
+            div {
+                padding: 1rem 0;
+                padding: 3rem 1rem 1rem;
+                flex-basis: 50%;
+                @include desktop {
+                    flex-basis: 33%;
+                }
+                &.blank {
+                    flex-basis: 0;
+                    padding: 0;
+                    display: none;
+                }
+            }
+        }
+        .checklist {
+            margin: 2rem auto;
+            position: relative;
+            .list-item {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                flex-wrap: wrap;
+                min-height: 90px;
+                @include desktop {
+                    min-height: 60px;
+                }
+                div {
+                    padding: 0.5rem;
+                    flex-basis: 50%;
+                    position: relative;
+                    @include desktop {
+                        flex-basis: 33%;
+                    } 
+                    &.text {
+                        display: none;
+                        @include desktop {
+                            display: block; 
+                            &::after {
+                                height: 2px;
+                                width: 98%;
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                background-color: $white;
+                                content: "";
+                            }
+                        }  
+                    }
+                    &.check {
+                        .text {
+                            display: block;
+                            border: 0;
+                            @include desktop {
+                                display: none;
+                            }
+                        }
+                        &.check-one {
+                            img {
+                                filter: brightness(0) saturate(100%) invert(54%) sepia(91%) saturate(2873%) hue-rotate(326deg) brightness(130%) contrast(119%);
+                            }
+                        }
+                        &::after {
+                            height: 2px;
+                            width: 80%;
+                            position: absolute;
+                            bottom: 0;
+                            left: 10%;
+                            background-color: $white;
+                            content: "";
+                        }
+                        &.check-two {
+                            @include desktop {
+                                &::after {
+                                    height: 2px;
+                                    width: 100%;
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    background-color: $white;
+                                    content: "";
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.alternate {
+            background-color: $dahlia;
+            color: $white;
+            .wrapper--inner {
+                &::before {
+                    content: none;
+                   
+                }
+                .list-item {
+                    
+                    .text, 
+                    .check {
+                        border: 1px solid $white;
+                        @include desktop {
+                            &::after {
+                                content: none !important;
+                            }
+                        }
+                    }
+                    .check {
+                        &::after {
+                            content: none !important;
+                        }
+                    }
+                    .check-one {
+                        img {
+                            filter: none !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .wrapper--btn {
+        text-align: center;
+    }
+}

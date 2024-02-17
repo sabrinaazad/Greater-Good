@@ -1,0 +1,275 @@
+.section--locations-archive {
+    .filters {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 4rem;
+        @include tablet {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .btn {
+            min-width: 20rem;
+            @include tablet {
+                min-width: auto;
+                margin: 0.25rem;
+                background-color: $lightGray;
+                border-color: $lightGray;
+                color: $plum;
+                &.active {
+                    background-color: $dahlia;
+                    border-color: $dahlia;
+                    color: $white;
+                }
+            }
+            @include regulardesktop {
+                min-width: 13rem;
+            }
+        }
+    }
+    .result {
+        display: flex;
+        flex-direction: column;
+        .location {
+            background-color: $lightGray;
+            padding: 2rem;
+            margin: 1rem auto;
+            border-radius: 10rem;
+            width: 100%;
+            max-width: 1440px;
+            .content {
+                text-align: center;
+                @include tablet {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+                .wrapper--image {
+                    width: 17rem;
+                    height: 17rem;
+                    @include tablet {
+                        width: 10rem;
+                        height: 10rem;
+                    }
+                    @include desktop {
+                        width: 15rem;
+                        height: 11rem;
+                        margin: unset;
+                    }
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        margin: auto;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        object-position: center;
+                        @include tablet {
+                            border-radius: 35%;
+                        }
+                    }
+                }
+                .wrapper--content {
+                    @include regulardesktop {
+                        flex-basis: 60%;
+                    }
+                }
+                .title {
+                    font-family: 'Comfortaa';
+                    font-weight: 900;
+                    color: $plum;
+                    font-size: 1.25rem;
+                    @include desktop {
+                        text-align: left;
+                        margin: 0 1rem;
+                    }
+                }
+                .contact {
+                    color: $dahlia;
+                    .phone {
+                        a {
+                            color: $dahlia;
+                        }
+                    }
+                    .address {
+                        margin: 1rem 0;
+                    }
+                }
+                .hours {
+                    color: $dahlia;
+                    @include regulardesktop {
+                        .wrap {
+                            display: flex;
+                            .mf, .ss {
+                                margin: 0;
+                                margin-right: 2rem;
+                            }
+                        }
+                    }
+                    .main-label {
+                        color: $plum;
+                        font-size: 1.25rem;
+                        @include tablet{
+                            font-size: 1rem;
+                        }
+                    }
+                    .label {
+                        color: $dahlia;
+                    }
+                    .ss {
+                        margin: 1rem auto;
+                    }
+                }
+                .wrapper--btn {
+                    margin: 2rem auto;
+                    @include desktop {
+                        margin: unset;
+                    }
+                }
+                .details {
+                    @include desktop {
+                        margin-top: 2rem;
+                        display: flex;
+                        text-align: left;
+                        .contact, .hours {
+                            margin: 0 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.section--blogs-archive {
+    .filters {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 4rem;
+        @include mobile {
+            .category-slider {
+                max-width: 100%; 
+                margin: 0 auto;
+                .slick-prev 
+                .slick-next {
+                    top: 130%;
+                    width: 30px;
+                    height: 30px;
+                    display: block;
+                    &:before {
+                        content: none;
+                    }
+                }
+                .slick-prev {
+                    left: 40%;
+                }
+                .slick-next {
+                    right: 40%;
+                }
+                .slick-slide {
+                    text-align: center;
+                    button {
+                        margin: 5px;
+                    }
+                }
+            }
+        }
+        @include tablet {
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: fit-content;
+            justify-content: center;
+            align-items: center;
+            background-color: $lightGray;
+            margin: 0 auto 6rem;
+            @include borderRadius();
+        }
+        .btn {
+            min-width: 20rem;
+            text-transform: capitalize;
+            @include tablet {
+                min-width: auto;
+                margin: 0.25rem;
+                background-color: $lightGray;
+                border-color: $lightGray;
+                color: $plum;
+                box-shadow: none;
+                &.active {
+                    background-color: $coral;
+                    border-color: $coral;
+                    color: $white;
+                }
+            }
+            @include regulardesktop {
+                min-width: 13rem;
+            }
+        }
+    }
+    .result {
+        display: flex;
+        flex-direction: column;
+        .blog {
+            text-align: center;
+            margin: 2rem auto;
+            @include tablet {
+                display: flex;
+                border-bottom: 0.1rem solid $mint;
+                padding-bottom: 4rem;
+                .wrapper--image {
+                    flex-basis: 40%;
+                }
+                .wrapper--content {
+                    flex-basis: 60%;
+                    margin-left: 2rem;
+                    text-align: left;
+                    .wrapper--btn {
+                        .btn {
+                            min-width: 15rem;
+                        }
+                    }
+                }
+            }
+            .wrapper--image {
+                img {
+                    border-radius: 1rem;
+                }
+            }
+            .wrapper--btn {
+                min-width: 20rem;
+            }
+        }
+        .pagination {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            font-size: 1.25rem;
+            .pagination-arrows,
+            .pagination-pages {
+                display: flex;
+                align-items: center;
+                margin: 0 10px;
+                span {
+                    color: $mint;
+                    cursor: pointer;
+                    margin: 0 5px;
+                    padding: 5px;
+                    &.active {
+                        color: $forest;
+                    }
+                }
+            }
+            .prev-page,
+            .next-page {
+                cursor: pointer;
+                width: 35px;
+                height: auto;
+            }
+            .next-page {
+                transform: rotate(180deg) translate(0px, 5px);
+            }
+        }
+    }
+}

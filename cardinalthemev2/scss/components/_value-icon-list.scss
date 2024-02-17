@@ -1,0 +1,128 @@
+.section--value-icon-list {
+    padding-left: 0;
+    padding-right: 0;
+    .wrapper--header {
+        max-width: 50rem;
+        margin: auto;
+        text-align: center;
+        .heading,
+        .subheading,
+        .blurb {
+            color: $forest;
+        }
+        .heading {
+            position: relative;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            &::after {
+                content: " ";
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                background-color:  $coral;
+                height: 0.25rem;
+                left: 0;
+                @include tablet {
+                    width: 70%;
+                }
+            }
+        }
+    }
+    .two-col {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        @include tablet {
+            flex-direction: row;
+        }
+        .col {
+            @include tablet {
+                flex-basis: 50%;
+            }
+            &:first-child {
+                padding-right: 1rem;
+                .wrapper--image {
+                    max-width: 45rem;
+                    img {
+                        margin: auto;
+                    }
+                }
+            }
+            &:nth-child(2) {
+                padding: 1rem;
+                text-align: center;
+                @include tablet {
+                    text-align: left;
+                    padding: 1rem 2rem;
+                }
+                .heading {
+                    position: relative;
+                    margin-bottom: 1rem;
+                    padding-bottom: 1rem;
+                    &::after {
+                        content: " ";
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        background-color:  $coral;
+                        height: 0.25rem;
+                        left: 0;
+                        @include tablet {
+                            width: 70%;
+                        }
+                    }
+                }
+                .blurb {
+                    color: $forest;
+                }
+                .wrapper--btn {
+                    margin-top: 2rem;
+                }
+            }
+        }
+        &.reverse {
+            flex-direction: column;
+            @include tablet {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+    .values {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 2rem;
+        .value {
+            flex-basis: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            @include tablet {
+                flex-basis: 16%;
+                flex-grow: 1;
+            }
+            .title {
+                background-color: $lightGray;
+                border-radius: 2rem;
+                padding: 0.5rem 1.5rem;
+                margin: 0.5rem auto;
+            }
+            .blurb {
+                color: $plum;
+                text-align: center;
+                font-size: 0.8rem;
+                padding: 1rem;
+            }
+        }
+        &.alternate {
+            @include tablet {
+                .value {
+                    flex-basis: 33%;
+                    max-width: 20rem;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}

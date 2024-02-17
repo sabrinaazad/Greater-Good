@@ -1,0 +1,89 @@
+.section--service-or-resource-grid {
+    .wrapper--section {
+        max-width: 1600px;
+        margin: auto;
+    }
+
+    .wrapper--header {
+        max-width: 50rem;
+        margin: auto;
+        text-align: center;
+        .heading,
+        .subheading,
+        .blurb {
+            color: $plum;
+        }
+    }
+    .grid { 
+        margin-top: 2rem;
+        @include desktop {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            justify-content: center;
+        }
+        .slide {
+            padding: 2rem;
+            background-color: $mint;
+            border-radius: 8rem;
+            flex-direction: column;
+            @include desktop {
+                padding: 2rem 1rem;
+                background-color: transparent;
+                @include transitionAll();
+                flex-basis: 33%;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:hover {
+                    background-color: $mint;
+                }
+            }
+            .content {
+                @include tablet {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                }
+                .wrapper--image {
+                    width: 10rem;
+                    @include tablet {
+                        margin-left: 1rem;
+                        margin-right: 1rem;
+                        width: 6rem;
+                    }
+                }
+                .title {
+                    text-align: center;
+                    font-size: 1.5rem;
+                    color: $plum;
+                    font-weight: 600;
+                    margin: 1rem auto;
+                    @include desktop {
+                        margin: 0 auto;
+                        text-align: left;
+                        font-size: 1.25rem;
+                   
+                    }
+                }
+                .wrapper--btn {
+                    text-align: center;
+                }
+            }
+        }
+        .slick-dots  {
+            li {
+                button:before {
+                    color: #9AB8C1;
+                }
+                &.slick-active {
+                    button:before {
+                        color: #064F4D;
+                    }
+                }
+            }
+        }
+    }
+}

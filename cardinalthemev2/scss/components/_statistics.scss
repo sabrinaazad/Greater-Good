@@ -1,0 +1,30 @@
+.section--statistics {
+    .wrapper--section {
+        max-width: 1440px;
+        margin: auto;
+    }
+    .heading {
+        text-align: center;
+    }
+    .statistics {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        .statistic {
+            margin: 1rem 0; 
+            
+            .title {
+                max-width: 10rem;
+                margin: auto;
+            }
+            @include tablet {
+                flex-basis: 25%;
+            }
+            .number {
+                font-size: 2rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,109 @@
+.section--tab-content-switcher-v2 {
+    text-align: center;
+    @include tablet {
+        padding-bottom: 6rem;
+    }
+    .wrapper--header {
+        max-width: 50rem;
+        margin: auto;
+        text-align: center;
+    }
+    .tab-content {
+        margin-top: 3rem;
+        margin-bottom: 0;
+        .slide {
+            .wrapper--content {
+                background-color: $dahlia;
+                padding: 1rem 1rem 3rem;
+                @include desktop {
+                    padding: 3rem 2rem 4rem;
+                }
+                @include borderRadius;
+                .content {
+                    background-color: $white;
+                    border-radius: 9rem;
+                    padding-bottom: 4rem;
+                    @include desktop {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding-bottom: 0;
+                        border-radius: 13rem;
+                        .wrapper--image {
+                            flex-basis: 40%;
+                        }
+                        .inner--content {
+                            flex-basis: 60%;
+                            text-align: left;
+                        }
+                    }
+                    .inner--content {
+                        padding: 1rem;
+                        @include desktop {
+                            padding: 1rem 5rem 4rem;
+                        }
+                        .number {
+                            color: $coral;
+                            font-family: 'Comfortaa';
+                            font-size: 6rem;
+                            font-weight: 900;
+                            line-height: 1;
+                        }
+                        .blurb {
+                            color: $plum;
+                            line-height: 1.25;
+                        }
+                    }
+                    img {
+                        border-radius: 50%;
+                        width: 19rem;
+                        border: 5px solid $white;
+                        margin: auto;
+                        @include desktop {
+                            width: 26rem;
+                            margin-left: 0;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    .slick-slider {
+        .slick-dots  {
+            background-color: $white;
+            position: relative;
+            display: flex;
+            width: fit-content;
+            margin: auto;
+            border-radius: 1rem;
+            padding: 0.25rem;
+            min-height: 2rem;
+            bottom: 1rem;
+            li {
+                width: 40px;
+                height: 30px;
+                margin: 0;
+                .number {
+                    color: $coral;
+                    font-size: 1.25rem;
+                    font-weight: 700;
+                    border-radius: 1rem;
+                    display: flex;
+                    width: 40px;
+                    height: 30px;
+                    justify-content: center;
+                    align-items: center;
+                
+                    
+                }
+                &.slick-active {
+                    .number {
+                        background-color: $coral;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}

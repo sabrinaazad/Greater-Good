@@ -1,0 +1,147 @@
+.section--tab-content-switcher-v1 {
+    text-align: center;
+    @include tablet {
+        padding-bottom: 6rem;
+    }
+    .wrapper--header {
+        max-width: 50rem;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .tabs {
+        top: 2rem;
+        position: relative;
+        .title {
+            .tab-links {
+                font-family: 'Comfortaa';
+                background: $coral;
+                color: $white;
+                padding: 1rem;
+                border: 0;
+                border-radius: 2rem;
+                border: 0.5rem solid $lightGray;
+                font-size: 1.25rem;
+                min-width: 15rem;
+                font-weight: 900;
+                &.active {
+                    background: $coral;
+                }
+            }
+        }
+    }
+    .manual, 
+    .selection {
+        padding: 4rem 1rem 2rem;
+        border-radius: 2rem;
+        .slider__synced-content {
+            .slide {
+                align-items: flex-start;
+            }
+        }
+        .tab-content {
+            @include desktop {
+                display: flex;
+            }
+        }
+        .member {
+            color: $white; 
+            text-align: center;
+            margin: 2rem auto;
+            @include desktop {
+                .content {
+                    padding: 1rem;
+                }
+            }
+            .wrapper--image {
+                width: 15rem;
+                @include desktop {
+                    width: 9rem;
+                }
+                @include largedesktop {
+                    width: 12rem;
+                }
+                img {
+                    margin: auto;
+                }
+            }
+            .name {
+                font-size: 1.5rem;
+            }
+            .name, .title, .blurb {
+                color: $white;
+            }
+            .blurb {
+                line-height: 1.5;
+            }
+            .btn {
+                margin-top: 1rem;
+                min-width: 15rem;
+                @include desktop {
+                    min-width: 9rem;
+                }
+            }
+        }
+    }
+    .slider__synced-nav {
+        @include desktop {
+            background-color: $lightGray;
+            max-width: fit-content;
+            margin: auto;
+            @include borderRadius();
+            .slick-track {
+                transform: translate3d(0px, 0px, 0px)!important;
+                width: auto!important;
+                justify-content: center!important;
+                
+            }
+            .title {
+                padding: 0;
+                
+                .tab-links {
+                    background-color: $lightGray;
+                    color: $plum;
+                    font-size: 1rem;
+                    min-width: 10rem;
+                }
+                &.slick-current {
+                    .tab-links {
+                        background-color: $coral;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    .slick-prev:before, 
+    .slick-next:before {
+        content: none;
+    }
+    .slick-prev {
+        left: 40%;
+        top: 130%;
+        width: 30px;
+        height: 30px;
+    }
+    .slick-next {
+        right: 40%;
+        top: 130%;
+        width: 30px;
+        height: 30px;
+    }
+    .slick-slider {
+        .slick-dots  {
+            margin-bottom: -4rem;
+            li {
+                button:before {
+                    color: $dahlia;
+                }
+                &.slick-active {
+                    button:before {
+                        color: $coral;
+                    }
+                }
+            }
+        }
+    }
+}

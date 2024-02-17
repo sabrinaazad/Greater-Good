@@ -1,0 +1,117 @@
+.section--upcoming-events {
+    padding-left: 0;
+    padding-right: 0;
+    @include tablet {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .two-col {
+        @include tablet {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+        }
+        .col {
+            @include tablet {
+                flex-basis: 50%;
+                width: 50%;
+            }
+            &:first-child {
+                padding: 1rem;
+                @include tablet {
+                    padding: 1rem 4rem;
+                }
+                .heading {
+                    position: relative;
+                    margin-bottom: 1rem;
+                    padding-bottom: 1rem;
+                }
+                .blurb {
+                    color: $forest;
+                }
+                .wrapper--btn {
+                    margin-top: 2rem;
+                }  
+            }
+            &:nth-child(2) {
+                @include tablet {
+                    // background-color: $mint;
+                    padding: 4rem 1rem;
+                }
+                @include regulardesktop {
+                    position: relative;
+                    padding: 4rem 2rem 4rem 6rem;
+                    overflow: hidden;
+                    &::before {
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        left: 0;
+                        top: 0;
+                        border-top-left-radius: 50%; 
+                        border-bottom-left-radius: 50%; 
+                        background-color: $mint;
+                        position: absolute;
+                        z-index: -1;
+                    }
+                    &::after {
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        left: 90%;
+                        top: 0;
+                        background-color: $mint;
+                        position: absolute;
+                        z-index: -1;
+                    }
+                }
+                .slider
+                .event {
+                    @include dropShadow;
+                    @include borderRadius;
+                    margin: 1rem;
+                    background-color: $white;
+                    .wrapper--image {
+                        width: 100%;
+                        height: auto;
+                        img {
+                            object-fit: cover;
+                            object-position: center;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .content {
+                        padding: 1rem;
+                        .text {
+                            margin: 1rem 0;
+                            @include desktop {
+                                font-size: 0.8rem;
+                            }
+                        }
+                    }
+                }
+                // .date {
+                //     @include desktop {
+                //         // position: absolute;
+                //         // left: -7rem;
+                //         // top: 40%;
+                //         .slick-dots {
+                //             display: none !important;
+                //         }
+                //         .inner {
+                //             display: flex;
+                //             flex-direction: column;
+                //             justify-content: center;
+                //             align-items: center;
+                //             color: $forest;
+                //             .large-font {
+                //                 font-size: 1.25rem;
+                //             }
+                //         }
+                //     }
+                // }
+            }
+        }
+    }
+}

@@ -1,0 +1,110 @@
+.section--testimonials-v1 {
+    text-align: center;
+    .wrapper--header {
+        max-width: 50rem;
+        margin: auto;
+        text-align: center;
+        .heading,
+        .subheading,
+        .blurb {
+            color: $white;
+        }
+    }
+    .testimonials {
+        max-width: 70rem;
+        margin: auto;
+        margin-top: 2rem;
+        .slide {
+            background-color: $periwinkle;
+            padding: 6rem 2rem;
+            border-radius: 9rem;
+            margin: 2rem 0;
+            @include tablet {
+                border-radius: 15rem;
+                padding: 6rem;
+            }
+        }
+        .testimonial {
+            position: relative;
+            &::before {
+                content: " ";
+                background-image: url('/wp-content/themes/cardinalthemev2/assets/quote.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 8rem;
+                height: 6rem;
+                position: absolute;
+                top: -7rem;
+                left: -2rem;
+                @include desktop {
+                    left: -6rem;
+                }
+              }
+        
+              &::after {
+                content: " ";
+                background-image: url('/wp-content/themes/cardinalthemev2/assets/quote.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 8rem;
+                height: 6rem;
+                position: absolute;
+                bottom: -7rem;
+                right: -2rem;
+                transform: rotate(180deg);
+                @include desktop {
+                    right: -6rem;
+                }
+              }
+            .author {
+                margin-top: 2rem;
+                @include tablet {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .wrapper--image {
+                    @include tablet {
+                        margin: unset;
+                    }
+                    img {
+                        width: 5rem;
+                        height: 5rem;
+                        object-fit: cover;
+                        border-radius: 50%;
+                        margin: auto;
+                    }
+                }
+                .info {
+                    @include tablet {
+                        text-align: left;
+                        margin-left: 1rem;
+                    }
+                    .name {
+                        font-weight: bold;
+                    }
+                    .title {
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+    .slick-slider {
+        .slick-dots  {
+            bottom: 5rem;
+            li {
+                button:before {
+                    color: $white;
+                }
+                &.slick-active {
+                    button:before {
+                        color: $mint;
+                    }
+                }
+            }
+        }
+    }
+}

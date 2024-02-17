@@ -1,0 +1,28 @@
+.section--logo-slider {
+    padding-left: 0;
+    padding-right: 0;
+    .wrapper--section {
+        max-width: 100%;
+    }
+    .wrapper--header {
+        padding: 0 1rem;
+        max-width: 50rem;
+        margin: auto;
+        text-align: center;
+        .heading,
+        .subheading,
+        .blurb {
+            color: $plum;
+        }
+    }
+    .slider--logo {
+        background-color: $dahlia;
+        padding: 4rem 0;
+        margin-top: 2rem;
+        .slide {
+            img {
+                max-width: 15em;
+            }
+        }
+    }
+}

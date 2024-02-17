@@ -1,0 +1,85 @@
+.section--team-members-v2 {
+    text-align: center;
+    .wrapper--header {
+        max-width: 50rem;
+        margin: auto;
+        text-align: center;
+        .heading,
+        .subheading,
+        .blurb {
+            color: $white;
+        }
+    }
+    .members {
+        margin-top: 2rem;
+        @include desktop { 
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            justify-content: space-evenly;
+            .member {
+                flex-basis: 33%;
+                .btn {
+                    opacity: 0;
+                    pointer-events: none;
+                    @include transitionAll();
+                }
+                .name {
+                    font-size: 1.25rem;
+                }
+                .title {
+                    text-transform: uppercase;
+                    font-size: 1rem;
+                    color: $plum;
+                }
+                &:hover {
+                    .wrapper--image {
+                        border: 0.75rem solid $mint;
+                    }
+                    .btn {
+                        opacity: 1;
+                        pointer-events: all;
+                    }
+                }
+            }
+        }
+        @include regulardesktop { 
+            .member {
+                flex-basis: 25%;
+            }
+
+        }
+        .wrapper--image {
+            max-width: 20rem;
+            border: 0.75rem solid $transparent;  
+            border-radius: 50%;
+            @include transitionAll();
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+        .slick-active {
+            .wrapper--image {
+                border: 0.75rem solid $mint;
+            }
+        }
+    }
+    .slick-slider {
+        .slick-dots  {
+            li {
+                button:before {
+                    color: $mint;
+                }
+                &.slick-active {
+                    button:before {
+                        color: $forest;
+                    }
+                }
+            }
+        }
+    }
+}

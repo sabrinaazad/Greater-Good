@@ -1,0 +1,68 @@
+.section--search-hero {
+    text-align: center;
+    background-position: left;
+    @include tablet {
+        background-position: center;
+    }
+    .blurb {
+        max-width: 50rem;
+        margin: auto;
+        color: $forest;
+        line-height: 1.5;
+    }
+    .text {
+        background-color: $mint;
+        position: relative;
+        padding: 1.5rem 2rem;
+        border-radius: 2rem;
+        text-align: left;
+        z-index: 1;
+        &::after {
+            content: " ";
+            background-image: url('/wp-content/themes/cardinalthemev2/assets/icon-search.png');
+            position: absolute;
+            right: 1rem;
+            top: 1.25rem;
+            width: 2rem;
+            height: 2rem;
+            @include backgroundProperties;
+        }
+    }
+    .list {
+        max-width: 50rem;
+        margin: 1rem auto 0;
+        @include tablet {
+            margin: 6rem auto 0;
+        }
+        .dropdown {
+            list-style-type: none;
+            padding-left: 0;
+            opacity: 0;
+            pointer-events: none;
+            background-color: $white;
+            text-align: left;
+            padding: 3rem 1rem 1rem 2rem;
+            margin: 0;
+            top: -2rem;
+            position: relative;
+            border-bottom-left-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+            @include dropShadow();
+            @include transitionAll();
+            li {
+                padding: 0.5rem 0;
+                a {
+                    color: $black;
+                    &:hover {
+                        color: $coral;
+                    }
+                }
+            }
+            &.is-open {
+                opacity: 1;
+                pointer-events: all;
+            }
+        }
+    }
+    
+}

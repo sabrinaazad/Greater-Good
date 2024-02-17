@@ -1,0 +1,107 @@
+.section--blog-carousel {
+    .wrapper--header {
+        max-width: 50rem;
+        margin: 0 auto 2rem;
+        text-align: center;
+
+    }
+    .blogs {
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+        .blog {
+            flex-direction: column;
+            overflow: hidden;
+            @include desktop {
+                margin: 0.5rem;
+                flex-basis: calc(25% - 0.5rem);
+            }
+            .wrapper {
+                border-radius: 10rem;
+                overflow: hidden;
+                position: relative;
+                cursor: pointer;
+                @include desktop {
+                    &::after {
+                        content: "LEARN MORE";
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 10rem;
+                        opacity: 0;
+                        top: 0;
+                        position: absolute;
+                        left: 0;
+                        @include transitionAll;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: $white;
+                        font-family: "Comfortaa";
+                        font-weight: 900;
+                        background-color: #b73563d9;
+                    }
+                    &:hover {
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            .wrapper--image {
+                @include backgroundProperties; 
+                min-height: 14rem;
+                width: 100%;
+            }
+            .wrapper--info {
+                padding: 2rem 1rem;
+                background-color: $forest;
+                text-align: center;
+                color: $white;
+                @include tablet {
+                    padding: 3rem;
+                }
+                @include desktop {
+                    padding: 3rem 1rem;
+                }
+                .title {
+                    color: $white;
+                    position: relative;
+                    margin-bottom: 1rem;
+                    padding-bottom: 1rem;
+                    &::after {
+                        content: " ";
+                        position: absolute;
+                        bottom: 0;
+                        width: 50%;
+                        background-color:  $coral;
+                        height: 0.25rem;
+                        left: 25%;
+                        @include tablet {
+                            width: 70%;
+                            left: 15%;
+                        }
+                    }
+                }
+                .blurb {
+                    line-height: 1.25;
+                }
+            }
+        }
+    }
+    .slick-slider {
+        .slick-dots  {
+            li {
+                button:before {
+                    color: $mint;
+                }
+                &.slick-active {
+                    button:before {
+                        color: $forest;
+                    }
+                }
+            }
+        }
+    }
+}

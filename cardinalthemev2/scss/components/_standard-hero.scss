@@ -1,0 +1,39 @@
+.section--standard-hero {
+    text-align: center;
+    background-position: left;
+    @include tablet {
+        background-position: center;
+        padding: 10rem 2rem;
+    }
+    .wrapper--header {
+        max-width: 60rem;
+        margin: auto;
+        @include tablet {
+            &.left-align {
+                text-align: left;
+                margin-left: 0;
+                .blurb {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    .heading {
+        @include desktop {
+            font-size: 6.25rem;
+            line-height: 1;
+        }
+    }
+    .heading, 
+    .blurb {
+        color: $white;
+    }
+    .blurb {
+        max-width: 50rem;
+        margin: 1.5rem auto;
+        line-height: 1.5;
+    }    
+    .wrapper--btn {
+        margin-top: 2rem;
+    }
+}
